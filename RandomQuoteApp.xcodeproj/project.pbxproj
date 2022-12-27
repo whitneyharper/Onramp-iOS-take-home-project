@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812AE5EC295B728D0040D9AB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EB295B728D0040D9AB /* DetailsViewController.swift */; };
 		81A7A46C295A63C7007662CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7A46B295A63C7007662CC /* Quote.swift */; };
 		81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2764295A12A1000D9DEB /* AppDelegate.swift */; };
 		81CC2767295A12A1000D9DEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2766295A12A1000D9DEB /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812AE5EB295B728D0040D9AB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		81A7A46B295A63C7007662CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		81CC2761295A12A1000D9DEB /* RandomQuoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomQuoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CC2764295A12A1000D9DEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812AE5EA295B6DEE0040D9AB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				812AE5EB295B728D0040D9AB /* DetailsViewController.swift */,
+				81CC2768295A12A1000D9DEB /* RandomQuoteViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		81A7A46A295A63AE007662CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +77,10 @@
 		81CC2763295A12A1000D9DEB /* RandomQuoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				812AE5EA295B6DEE0040D9AB /* View Controllers */,
 				81A7A46A295A63AE007662CC /* Model */,
 				81CC2764295A12A1000D9DEB /* AppDelegate.swift */,
 				81CC2766295A12A1000D9DEB /* SceneDelegate.swift */,
-				81CC2768295A12A1000D9DEB /* RandomQuoteViewController.swift */,
 				81CC276A295A12A1000D9DEB /* Main.storyboard */,
 				81CC276D295A12A2000D9DEB /* Assets.xcassets */,
 				81CC276F295A12A2000D9DEB /* LaunchScreen.storyboard */,
@@ -151,6 +162,7 @@
 			files = (
 				81A7A46C295A63C7007662CC /* Quote.swift in Sources */,
 				81CC2769295A12A1000D9DEB /* RandomQuoteViewController.swift in Sources */,
+				812AE5EC295B728D0040D9AB /* DetailsViewController.swift in Sources */,
 				81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */,
 				81CC2767295A12A1000D9DEB /* SceneDelegate.swift in Sources */,
 			);
