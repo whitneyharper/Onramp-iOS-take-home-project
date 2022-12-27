@@ -19,11 +19,12 @@ class RandomQuoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        QuoteLabel.text = " \"If you can dance and be free and not be embarrassed, you can rule the world.\""
-        AuthorLabel.text = "- Amy Poehler"
+    
+        QuoteLabel.text = ""
+        AuthorLabel.text = ""
+        fetchQuote()
     }
-
+    
     let apiURL = "https://dummyjson.com/quotes/random"
     func fetchQuote() {
         let url = URL(string: apiURL)!
