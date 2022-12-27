@@ -22,9 +22,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4CJ-0W-YSy" userLabel="QuoteLabel">
                                         <rect key="frame" x="11" y="38" width="272" height="91"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="&quot;Life isn’t about getting and having, it’s about giving and being.&quot;">
+                                            <fragment content="&quot;If you can dance and be free and not be embarrassed, you can rule the world.&quot;">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="30" name="Palatino-Roman"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -32,8 +32,8 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Kevin Kruse" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YZR-bh-5gZ" userLabel="AuthorLabel">
-                                        <rect key="frame" x="146" y="156" width="127" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Amy Poehler" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YZR-bh-5gZ" userLabel="AuthorLabel">
+                                        <rect key="frame" x="142" y="156" width="131" height="23"/>
                                         <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                 <rect key="frame" x="91" y="432" width="139" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zOz-He-4I7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zOz-He-4I7" userLabel="QuoteButton">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.56862745100000001" green="0.94901960780000005" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,6 +68,9 @@
                                         <state key="normal" image="shuffle" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="33" scale="default" weight="regular"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29I-UT-Vlh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="18b-jf-Hij">
                                         <rect key="frame" x="98.5" y="0.0" width="40.5" height="136"/>
@@ -96,6 +99,10 @@
                             <constraint firstItem="7z8-QB-EhI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="l2i-g4-CVk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AuthorLabel" destination="YZR-bh-5gZ" id="9DQ-zL-obH"/>
+                        <outlet property="QuoteLabel" destination="4CJ-0W-YSy" id="hOA-2v-la9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

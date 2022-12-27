@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81A7A46C295A63C7007662CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7A46B295A63C7007662CC /* Quote.swift */; };
 		81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2764295A12A1000D9DEB /* AppDelegate.swift */; };
 		81CC2767295A12A1000D9DEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2766295A12A1000D9DEB /* SceneDelegate.swift */; };
 		81CC2769295A12A1000D9DEB /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2768295A12A1000D9DEB /* RandomQuoteViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81A7A46B295A63C7007662CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		81CC2761295A12A1000D9DEB /* RandomQuoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomQuoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CC2764295A12A1000D9DEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CC2766295A12A1000D9DEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81A7A46A295A63AE007662CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81A7A46B295A63C7007662CC /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		81CC2758295A12A1000D9DEB = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		81CC2763295A12A1000D9DEB /* RandomQuoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				81A7A46A295A63AE007662CC /* Model */,
 				81CC2764295A12A1000D9DEB /* AppDelegate.swift */,
 				81CC2766295A12A1000D9DEB /* SceneDelegate.swift */,
 				81CC2768295A12A1000D9DEB /* RandomQuoteViewController.swift */,
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A7A46C295A63C7007662CC /* Quote.swift in Sources */,
 				81CC2769295A12A1000D9DEB /* RandomQuoteViewController.swift in Sources */,
 				81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */,
 				81CC2767295A12A1000D9DEB /* SceneDelegate.swift in Sources */,
