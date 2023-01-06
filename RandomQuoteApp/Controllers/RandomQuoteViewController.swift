@@ -12,20 +12,16 @@ class RandomQuoteViewController: UIViewController{
     var favorites = [Favorite]()
     var favoritesTableViewController: FavoritesTableViewController?
     
-    @IBOutlet weak var QuoteLabel: UILabel!
-    @IBOutlet weak var AuthorLabel: UILabel!
+   var randomView = RandomQuoteView()
     
-    @IBAction func getQuote(_ sender: UIButton) {
+    override func loadView() {
+        self.view = randomView
         fetchQuote()
-    }
-    
-    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
-      saveAsFavorite()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchQuote()
+        print(randomView == self.view)
         //UserDefaults.standard.removeObject(forKey: "favorites")
         }
     
@@ -40,49 +36,50 @@ class RandomQuoteViewController: UIViewController{
             else { return }
             
             DispatchQueue.main.async {
-                self.QuoteLabel.text = "\"\(result.quote)\""
-                self.AuthorLabel.text = "- \(result.author)"
+                self.randomView.quoteLabel.text = "\"\(result.quote)\""
+                self.randomView.authorLabel.text = "- \(result.author)"
             }
         }
         task.resume()
     }
     
+    @objc func randomButtonPressed(_ sender: UIButton) {
+        fetchQuote()
+    }
+    
+    @objc func favoriteButtonPressed(_ sender: UIButton){
+        saveAsFavorite()
+    }
+    
     func saveAsFavorite(){
-        let quote = QuoteLabel.text
-        let author = AuthorLabel.text
+        let quote = self.randomView.quoteLabel.text
+        let author = self.randomView.authorLabel.text
         if let quote = quote, let author = author {
             
             if favoriteExists(quote: quote, author: author) {
-                // Display an alert if the current quote and author combination already exists in the favorites array
                 displayDuplicateFavoriteAlert()
                 return
             }
             
             let favorite = Favorite(quote: quote, author: author)
             
-            // Encode the favorite to a property list object
             let encoder = PropertyListEncoder()
+            
             if let encodedFavorite = try? encoder.encode(favorite) {
-                
-                // Get the current favorites array from UserDefaults, or create a new empty array if none exists
                 var favorites = UserDefaults.standard.array(forKey: "favorites") as? [Data] ?? [Data]()
-                
-                // Append the encoded favorite to the favorites array
                 favorites.append(encodedFavorite)
-                
-                // Save the updated favorites array to UserDefaults
                 UserDefaults.standard.set(favorites, forKey: "favorites")
                 displayFavoriteAddedAlert()
             }
         }
     }
     
-    private func favoriteExists(quote: String, author: String) -> Bool {
-            let decoder = PropertyListDecoder()
-            let encodedFavorites = UserDefaults.standard.array(forKey: "favorites") as? [Data] ?? [Data]()
-            let favorites = encodedFavorites.compactMap { try? decoder.decode(Favorite.self, from: $0) }
-            return favorites.contains(where: { $0.quote == quote && $0.author == author })
-        }
+    func favoriteExists(quote: String, author: String) -> Bool {
+        let decoder = PropertyListDecoder()
+        let encodedFavorites = UserDefaults.standard.array(forKey: "favorites") as? [Data] ?? [Data]()
+        let favorites = encodedFavorites.compactMap { try? decoder.decode(Favorite.self, from: $0) }
+        return favorites.contains(where: { $0.quote == quote && $0.author == author })
+    }
     
     private func displayDuplicateFavoriteAlert() {
         let alertController = UIAlertController(title: "Already a Favorite", message: "This quote is already in your favorites.", preferredStyle: .alert)
@@ -92,9 +89,11 @@ class RandomQuoteViewController: UIViewController{
     }
     
     private func displayFavoriteAddedAlert() {
-        let alertController = UIAlertController(title: "Added to Favorites", message: "This quote has been added to your favorites.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: "Favorite added!", preferredStyle: .alert)
+        alertController.modalPresentationStyle = .overCurrentContext
+        present(alertController, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+        alertController.dismiss(animated: true)
+        }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810890BE2967C06A00058B6E /* RandomQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810890BD2967C06A00058B6E /* RandomQuoteView.swift */; };
 		812AE5EC295B728D0040D9AB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EB295B728D0040D9AB /* FavoriteViewController.swift */; };
 		812AE5EE295BBA160040D9AB /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */; };
 		812AE5F0295BD0940040D9AB /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EF295BD0940040D9AB /* Favorite.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		810890BD2967C06A00058B6E /* RandomQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteView.swift; sourceTree = "<group>"; };
 		812AE5EB295B728D0040D9AB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		812AE5EF295BD0940040D9AB /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		810890BC2967BD9100058B6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				810890BD2967C06A00058B6E /* RandomQuoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				81A7A46C295A63C7007662CC /* Quote.swift in Sources */,
 				812AE5F0295BD0940040D9AB /* Favorite.swift in Sources */,
+				810890BE2967C06A00058B6E /* RandomQuoteView.swift in Sources */,
 				81CC2769295A12A1000D9DEB /* RandomQuoteViewController.swift in Sources */,
 				812AE5EC295B728D0040D9AB /* FavoriteViewController.swift in Sources */,
 				81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */,
