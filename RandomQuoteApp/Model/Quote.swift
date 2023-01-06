@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Quote: Codable {
-    var id: Int
-    var quote: String
-    var author: String
+struct Quote: Decodable {
+    let id: Int
+    let quote: String
+    let author: String
 }
