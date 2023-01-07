@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		810890BE2967C06A00058B6E /* RandomQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810890BD2967C06A00058B6E /* RandomQuoteView.swift */; };
-		812AE5EC295B728D0040D9AB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EB295B728D0040D9AB /* FavoriteViewController.swift */; };
+		812132F629688F6000E32723 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812132F529688F6000E32723 /* FavoriteCell.swift */; };
+		812132F8296890DA00E32723 /* FavoriteQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812132F7296890DA00E32723 /* FavoriteQuoteView.swift */; };
+		812132FA296892E200E32723 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812132F9296892E200E32723 /* TabBarController.swift */; };
+		812AE5EC295B728D0040D9AB /* FavoriteQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */; };
 		812AE5EE295BBA160040D9AB /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */; };
 		812AE5F0295BD0940040D9AB /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EF295BD0940040D9AB /* Favorite.swift */; };
 		81A7A46C295A63C7007662CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7A46B295A63C7007662CC /* Quote.swift */; };
@@ -21,7 +24,10 @@
 
 /* Begin PBXFileReference section */
 		810890BD2967C06A00058B6E /* RandomQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteView.swift; sourceTree = "<group>"; };
-		812AE5EB295B728D0040D9AB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		812132F529688F6000E32723 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		812132F7296890DA00E32723 /* FavoriteQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteQuoteView.swift; sourceTree = "<group>"; };
+		812132F9296892E200E32723 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteQuoteViewController.swift; sourceTree = "<group>"; };
 		812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		812AE5EF295BD0940040D9AB /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		81A7A46B295A63C7007662CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				810890BD2967C06A00058B6E /* RandomQuoteView.swift */,
+				812132F7296890DA00E32723 /* FavoriteQuoteView.swift */,
+				812132F529688F6000E32723 /* FavoriteCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -57,8 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */,
-				812AE5EB295B728D0040D9AB /* FavoriteViewController.swift */,
+				812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */,
 				81CC2768295A12A1000D9DEB /* RandomQuoteViewController.swift */,
+				812132F9296892E200E32723 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,10 +184,13 @@
 			files = (
 				81A7A46C295A63C7007662CC /* Quote.swift in Sources */,
 				812AE5F0295BD0940040D9AB /* Favorite.swift in Sources */,
+				812132FA296892E200E32723 /* TabBarController.swift in Sources */,
 				810890BE2967C06A00058B6E /* RandomQuoteView.swift in Sources */,
 				81CC2769295A12A1000D9DEB /* RandomQuoteViewController.swift in Sources */,
-				812AE5EC295B728D0040D9AB /* FavoriteViewController.swift in Sources */,
+				812AE5EC295B728D0040D9AB /* FavoriteQuoteViewController.swift in Sources */,
+				812132F8296890DA00E32723 /* FavoriteQuoteView.swift in Sources */,
 				81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */,
+				812132F629688F6000E32723 /* FavoriteCell.swift in Sources */,
 				812AE5EE295BBA160040D9AB /* FavoritesTableViewController.swift in Sources */,
 				81CC2767295A12A1000D9DEB /* SceneDelegate.swift in Sources */,
 			);

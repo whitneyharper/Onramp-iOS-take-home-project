@@ -81,14 +81,14 @@ class RandomQuoteViewController: UIViewController{
         return favorites.contains(where: { $0.quote == quote && $0.author == author })
     }
     
-    private func displayDuplicateFavoriteAlert() {
+    func displayDuplicateFavoriteAlert() {
         let alertController = UIAlertController(title: "Already a Favorite", message: "This quote is already in your favorites.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
     
-    private func displayFavoriteAddedAlert() {
+    func displayFavoriteAddedAlert() {
         let alertController = UIAlertController(title: nil, message: "Favorite added!", preferredStyle: .alert)
         alertController.modalPresentationStyle = .overCurrentContext
         present(alertController, animated: true)

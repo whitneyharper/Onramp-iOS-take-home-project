@@ -7,18 +7,32 @@
 
 import UIKit
 
-class FavoriteViewController: UIViewController {
+class FavoriteQuoteViewController: UIViewController {
     
     var favorite: Favorite?
     var favoritesTableViewController: FavoritesTableViewController?
 
-    @IBOutlet weak var QuoteLabel: UILabel!
-    @IBOutlet weak var AuthorLabel: UILabel!
+    var contentView = FavoriteQuoteView()
     
-    @IBAction func deleteButton(_ sender: UIBarButtonItem) {
-        // Get the encoded favorites array from UserDefaults
+    override func loadView() {
+        self.view = contentView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(contentView == self.view)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteButton(_:)))
+        self.navigationItem.title = "Favorite Quote"
+           
+        if let favorite = favorite {
+            self.contentView.quoteLabel.text = favorite.quote
+            self.contentView.authorLabel.text = favorite.author
+        }
+    }
+    
+    @objc func deleteButton(_ sender: UIBarButtonItem) {
             var encodedFavorites = UserDefaults.standard.array(forKey: "favorites") as? [Data] ?? [Data]()
-            // Find the index of the encoded favorite that corresponds to the currently shown favorite
+            
             if let index = encodedFavorites.firstIndex(where: { (encodedFavorite) -> Bool in
                 let decoder = PropertyListDecoder()
                 if let decodedFavorite = try? decoder.decode(Favorite.self, from: encodedFavorite) {
@@ -26,31 +40,20 @@ class FavoriteViewController: UIViewController {
                 }
                 return false
             }) {
-                // Remove the encoded favorite from the array
                 encodedFavorites.remove(at: index)
-                // Save the updated encoded favorites array to UserDefaults
+                
                 UserDefaults.standard.set(encodedFavorites, forKey: "favorites")
             }
         
         if let favorite = favorite {
             
-            // Find the index of the favorite in the favorites array
             if let index = favoritesTableViewController?.favorites.firstIndex(of: favorite) {
-                // Remove the favorite from the array
+                
                 favoritesTableViewController?.favorites.remove(at: index)
             }
-            // Reload the table view
             favoritesTableViewController?.tableView.reloadData()
         }
         
         navigationController?.popViewController(animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if let favorite = favorite {
-            QuoteLabel.text = favorite.quote
-            AuthorLabel.text = favorite.author
-        }
     }
 }
