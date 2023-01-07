@@ -8,8 +8,8 @@
 import Foundation
 
 struct Favorite: Codable {
-  var quote: String
-  var author: String
+  let quote: String
+  let author: String
 }
 
 extension Favorite: Equatable {
