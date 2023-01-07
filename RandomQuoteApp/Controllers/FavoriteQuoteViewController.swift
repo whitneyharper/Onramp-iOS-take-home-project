@@ -30,29 +30,29 @@ class FavoriteQuoteViewController: UIViewController {
     }
     
     @objc func deleteButton(_ sender: UIBarButtonItem) {
-            var encodedFavorites = UserDefaults.standard.array(forKey: "favorites") as? [Data] ?? [Data]()
-            
-            if let index = encodedFavorites.firstIndex(where: { (encodedFavorite) -> Bool in
-                let decoder = PropertyListDecoder()
-                if let decodedFavorite = try? decoder.decode(Favorite.self, from: encodedFavorite) {
-                    return decodedFavorite == favorite
-                }
-                return false
-            }) {
-                encodedFavorites.remove(at: index)
-                
-                UserDefaults.standard.set(encodedFavorites, forKey: "favorites")
-            }
+          deleteFavorite()
+    }
+    
+    func deleteFavorite(){
+        var encodedFavorites = UserDefaults.standard.array(forKey: "favorites") as? [Data] ?? [Data]()
         
+        if let index = encodedFavorites.firstIndex(where: { (encodedFavorite) -> Bool in
+            let decoder = PropertyListDecoder()
+            if let decodedFavorite = try? decoder.decode(Favorite.self, from: encodedFavorite) {
+                return decodedFavorite == favorite
+            }
+            return false
+        })
+        {
+            encodedFavorites.remove(at: index)
+            UserDefaults.standard.set(encodedFavorites, forKey: "favorites")
+        }
         if let favorite = favorite {
-            
             if let index = favoritesTableViewController?.favorites.firstIndex(of: favorite) {
-                
                 favoritesTableViewController?.favorites.remove(at: index)
             }
             favoritesTableViewController?.tableView.reloadData()
         }
-        
         navigationController?.popViewController(animated: true)
-    }
+        }
 }
