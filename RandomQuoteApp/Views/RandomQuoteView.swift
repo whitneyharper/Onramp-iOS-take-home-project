@@ -9,7 +9,6 @@ import UIKit
 
 class RandomQuoteView: UIView {
     
-    var imageView = UIImageView()
     var headingLabel = UILabel()
     var quoteLabel = UILabel()
     var authorLabel = UILabel()
@@ -43,31 +42,27 @@ class RandomQuoteView: UIView {
 
        private func setupUI() {
            
-           imageView.clipsToBounds = true
-           imageView.contentMode = .scaleAspectFill
-           imageView.image = UIImage(named: "vintage1x")
-           imageView.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
-           imageView.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .vertical)
-           imageView.translatesAutoresizingMaskIntoConstraints = false
+           self.backgroundColor = UIColor(red: 0.80784313725490198, green: 0.84313725490196079, blue: 0.94901960784313721, alpha: 1)
            
            headingLabel.adjustsFontForContentSizeCategory = true
            headingLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
            headingLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
            headingLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .vertical)
            headingLabel.text = "Dear Self, "
+           headingLabel.textColor = UIColor(red: 0.28627450980392155, green: 0.32941176470588235, blue: 0.45098039215686275, alpha: 1)
            headingLabel.translatesAutoresizingMaskIntoConstraints = false
            
            quoteLabel.adjustsFontForContentSizeCategory = true
-           quoteLabel.font = UIFont.preferredFont(forTextStyle: .body)
+           quoteLabel.font = UIFont.preferredFont(forTextStyle: .title3)
            quoteLabel.minimumScaleFactor = 0.5
-           quoteLabel.numberOfLines = 6
+           quoteLabel.numberOfLines = 5
            quoteLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 749), for: .vertical)
            quoteLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
            quoteLabel.text = ""
            quoteLabel.translatesAutoresizingMaskIntoConstraints = false
            
            authorLabel.adjustsFontForContentSizeCategory = true
-           authorLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+           authorLabel.font = UIFont.preferredFont(forTextStyle: .callout)
            authorLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
            authorLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .vertical)
            authorLabel.text = ""
@@ -84,7 +79,7 @@ class RandomQuoteView: UIView {
            saveButton.contentHorizontalAlignment = .fill
            saveButton.contentMode = .scaleAspectFill
            saveButton.contentVerticalAlignment = .fill
-           saveButton.tintColor = UIColor(red: 0.34901960780000002, green: 0.2784313725, blue: 0.21176470589999999, alpha: 1)
+           saveButton.tintColor = UIColor(red: 0.28627450980392155, green: 0.32941176470588235, blue: 0.45098039215686275, alpha: 1)
            saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
            saveButton.titleLabel?.lineBreakMode = .byTruncatingMiddle
            saveButton.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +91,7 @@ class RandomQuoteView: UIView {
            quoteButton.contentMode = .scaleAspectFill
            quoteButton.contentVerticalAlignment = .fill
        
-           quoteButton.tintColor = UIColor(red: 0.34901960780000002, green: 0.2784313725, blue: 0.21176470589999999, alpha: 1)
+           quoteButton.tintColor = UIColor(red: 0.28627450980392155, green: 0.32941176470588235, blue: 0.45098039215686275, alpha: 1)
            quoteButton.titleLabel?.lineBreakMode = .byTruncatingMiddle
            quoteButton.translatesAutoresizingMaskIntoConstraints = false
            quoteButton.setImage(UIImage(systemName: "shuffle"), for: .normal)
@@ -110,7 +105,6 @@ class RandomQuoteView: UIView {
            stackView.spacing = 94
            stackView.translatesAutoresizingMaskIntoConstraints = false
            
-           addSubview(imageView)
            addSubview(headingLabel)
            addSubview(quoteView)
            addSubview(stackView)
@@ -122,16 +116,12 @@ class RandomQuoteView: UIView {
           headingLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
           headingLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
           quoteView.topAnchor.constraint(equalTo: headingLabel.bottomAnchor, constant: 39),
-          self.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
-          imageView.topAnchor.constraint(equalTo: self.topAnchor),
           self.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: quoteView.trailingAnchor, constant: 20),
           quoteView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
           quoteView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-          imageView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
           stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
           quoteView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 161),
           stackView.topAnchor.constraint(equalTo: quoteView.bottomAnchor, constant: 40),
-          imageView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
           self.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: headingLabel.trailingAnchor, constant: 20),
 
           stackView.heightAnchor.constraint(equalToConstant: 50),

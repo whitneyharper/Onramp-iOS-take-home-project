@@ -23,7 +23,6 @@ class FavoriteQuoteViewController: UIViewController {
         print(contentView == self.view)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteButton(_:)))
         self.navigationItem.title = "Favorite Quote"
-           
         if let favorite = favorite {
             self.contentView.quoteLabel.text = favorite.quote
             self.contentView.authorLabel.text = favorite.author

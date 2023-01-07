@@ -8,7 +8,7 @@
 import UIKit
 
 class FavoriteQuoteView: UIView {
-    var imageView = UIImageView()
+ 
     var quoteLabel = UILabel()
     var authorLabel = UILabel()
    
@@ -34,11 +34,7 @@ class FavoriteQuoteView: UIView {
 
    private func setupUI() {
        
-       imageView.clipsToBounds = true
-       imageView.image = UIImage(named: "vintage1x")
-       imageView.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
-       imageView.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .vertical)
-       imageView.translatesAutoresizingMaskIntoConstraints = false
+       self.backgroundColor = UIColor(red: 0.80784313725490198, green: 0.84313725490196079, blue: 0.94901960784313721, alpha: 1)
        
        quoteLabel.adjustsFontForContentSizeCategory = true
        quoteLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
@@ -49,6 +45,7 @@ class FavoriteQuoteView: UIView {
        quoteLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
        quoteLabel.text = ""
        quoteLabel.textAlignment = .center
+       quoteLabel.textColor = UIColor(red: 0.28627450980392155, green: 0.32941176470588235, blue: 0.45098039215686275, alpha: 1)
        quoteLabel.translatesAutoresizingMaskIntoConstraints = false
        
        authorLabel.adjustsFontForContentSizeCategory = true
@@ -58,22 +55,18 @@ class FavoriteQuoteView: UIView {
        authorLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .vertical)
        authorLabel.text = ""
        authorLabel.textAlignment = .center
+       authorLabel.textColor = UIColor(red: 0.28627450980392155, green: 0.32941176470588235, blue: 0.45098039215686275, alpha: 1)
        authorLabel.translatesAutoresizingMaskIntoConstraints = false
        
-       addSubview(imageView)
        addSubview(quoteLabel)
        addSubview(authorLabel)
    }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            self.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
             quoteLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             quoteLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: self.topAnchor),
             authorLabel.topAnchor.constraint(equalTo: quoteLabel.bottomAnchor, constant: 25),
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
             self.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: authorLabel.trailingAnchor, constant: 24),
             self.trailingAnchor.constraint(greaterThanOrEqualTo: quoteLabel.trailingAnchor, constant: 24),
             authorLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 71),
