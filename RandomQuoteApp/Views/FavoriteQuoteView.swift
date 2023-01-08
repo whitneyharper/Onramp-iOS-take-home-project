@@ -8,7 +8,7 @@
 import UIKit
 
 class FavoriteQuoteView: UIView {
- 
+    
     var quoteLabel = UILabel()
     var authorLabel = UILabel()
    

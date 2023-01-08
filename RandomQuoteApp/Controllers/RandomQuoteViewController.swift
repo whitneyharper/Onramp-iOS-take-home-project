@@ -25,6 +25,14 @@ class RandomQuoteViewController: UIViewController{
         //UserDefaults.standard.removeObject(forKey: "favorites")
         }
     
+    @objc func randomButtonPressed(_ sender: UIButton) {
+        fetchQuote()
+    }
+    
+    @objc func favoriteButtonPressed(_ sender: UIButton){
+        saveAsFavorite()
+    }
+    
     let apiURL = "https://dummyjson.com/quotes/random"
     func fetchQuote() {
         let url = URL(string: apiURL)!
@@ -41,14 +49,6 @@ class RandomQuoteViewController: UIViewController{
             }
         }
         task.resume()
-    }
-    
-    @objc func randomButtonPressed(_ sender: UIButton) {
-        fetchQuote()
-    }
-    
-    @objc func favoriteButtonPressed(_ sender: UIButton){
-        saveAsFavorite()
     }
     
     func saveAsFavorite(){

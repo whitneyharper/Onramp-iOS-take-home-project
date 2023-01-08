@@ -53,16 +53,18 @@ class RandomQuoteView: UIView {
            headingLabel.translatesAutoresizingMaskIntoConstraints = false
            
            quoteLabel.adjustsFontForContentSizeCategory = true
-           quoteLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+           quoteLabel.font = UIFont.preferredFont(forTextStyle: .body)
+           quoteLabel.textColor = UIColor.black
            quoteLabel.minimumScaleFactor = 0.5
-           quoteLabel.numberOfLines = 5
+           quoteLabel.numberOfLines = 6
            quoteLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 749), for: .vertical)
            quoteLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
            quoteLabel.text = ""
            quoteLabel.translatesAutoresizingMaskIntoConstraints = false
            
            authorLabel.adjustsFontForContentSizeCategory = true
-           authorLabel.font = UIFont.preferredFont(forTextStyle: .callout)
+           authorLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+           authorLabel.textColor = UIColor.black
            authorLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
            authorLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .vertical)
            authorLabel.text = ""

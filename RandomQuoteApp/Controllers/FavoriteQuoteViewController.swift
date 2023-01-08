@@ -21,8 +21,11 @@ class FavoriteQuoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(contentView == self.view)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteButton(_:)))
-        self.navigationItem.title = "Favorite Quote"
+        
+        let delete = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(deleteButton(_:)))
+        let share = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up.fill"), style: .plain, target: self, action: #selector(shareButton(_:)))
+        self.navigationItem.rightBarButtonItems = [delete, share]
+        
         if let favorite = favorite {
             self.contentView.quoteLabel.text = favorite.quote
             self.contentView.authorLabel.text = favorite.author
@@ -31,6 +34,10 @@ class FavoriteQuoteViewController: UIViewController {
     
     @objc func deleteButton(_ sender: UIBarButtonItem) {
           deleteFavorite()
+    }
+    
+    @objc func shareButton(_ sender: UIBarButtonItem){
+        shareFavorite()
     }
     
     func deleteFavorite(){
@@ -55,4 +62,14 @@ class FavoriteQuoteViewController: UIViewController {
         }
         navigationController?.popViewController(animated: true)
         }
+    
+    func shareFavorite(){
+        if let quote = favorite?.quote, let author = favorite?.author {
+            let favorite = "\(quote)  \(author)"
+            let activityViewController = UIActivityViewController(activityItems: [favorite], applicationActivities: nil)
+            present(activityViewController, animated: true)
+        } else {
+            return
+        }
+    }
 }
