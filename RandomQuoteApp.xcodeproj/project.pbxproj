@@ -11,6 +11,7 @@
 		812132F629688F6000E32723 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812132F529688F6000E32723 /* FavoriteCell.swift */; };
 		812132F8296890DA00E32723 /* FavoriteQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812132F7296890DA00E32723 /* FavoriteQuoteView.swift */; };
 		812132FA296892E200E32723 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812132F9296892E200E32723 /* TabBarController.swift */; };
+		812894AE296B5366004CC990 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 812894AD296B5366004CC990 /* README.md */; };
 		812AE5EC295B728D0040D9AB /* FavoriteQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */; };
 		812AE5EE295BBA160040D9AB /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */; };
 		812AE5F0295BD0940040D9AB /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EF295BD0940040D9AB /* Favorite.swift */; };
@@ -27,6 +28,7 @@
 		812132F529688F6000E32723 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		812132F7296890DA00E32723 /* FavoriteQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteQuoteView.swift; sourceTree = "<group>"; };
 		812132F9296892E200E32723 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		812894AD296B5366004CC990 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../Downloads/README.md; sourceTree = "<group>"; };
 		812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteQuoteViewController.swift; sourceTree = "<group>"; };
 		812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		812AE5EF295BD0940040D9AB /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		81CC2758295A12A1000D9DEB = {
 			isa = PBXGroup;
 			children = (
+				812894AD296B5366004CC990 /* README.md */,
 				81CC2763295A12A1000D9DEB /* RandomQuoteApp */,
 				81CC2762295A12A1000D9DEB /* Products */,
 			);
@@ -170,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812894AE296B5366004CC990 /* README.md in Resources */,
 				81CC2771295A12A2000D9DEB /* LaunchScreen.storyboard in Resources */,
 				81CC276E295A12A2000D9DEB /* Assets.xcassets in Resources */,
 			);
