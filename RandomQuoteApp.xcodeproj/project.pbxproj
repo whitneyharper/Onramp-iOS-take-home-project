@@ -14,6 +14,10 @@
 		812AE5EC295B728D0040D9AB /* FavoriteQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */; };
 		812AE5EE295BBA160040D9AB /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */; };
 		812AE5F0295BD0940040D9AB /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AE5EF295BD0940040D9AB /* Favorite.swift */; };
+		8161C871296C934900C3BAEC /* FavoritesTableScreen_Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8161C86A296C934800C3BAEC /* FavoritesTableScreen_Gif.gif */; };
+		8161C873296C934900C3BAEC /* Views_Screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161C86C296C934900C3BAEC /* Views_Screenshots.png */; };
+		8161C875296C934900C3BAEC /* FavoriteQuoteScreen_Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8161C86E296C934900C3BAEC /* FavoriteQuoteScreen_Gif.gif */; };
+		8161C877296C934900C3BAEC /* RandomQuoteScreen_Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8161C870296C934900C3BAEC /* RandomQuoteScreen_Gif.gif */; };
 		81A7A46C295A63C7007662CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7A46B295A63C7007662CC /* Quote.swift */; };
 		81CC2765295A12A1000D9DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2764295A12A1000D9DEB /* AppDelegate.swift */; };
 		81CC2767295A12A1000D9DEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2766295A12A1000D9DEB /* SceneDelegate.swift */; };
@@ -30,6 +34,11 @@
 		812AE5EB295B728D0040D9AB /* FavoriteQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteQuoteViewController.swift; sourceTree = "<group>"; };
 		812AE5ED295BBA160040D9AB /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		812AE5EF295BD0940040D9AB /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		8161C868296C930A00C3BAEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8161C86A296C934800C3BAEC /* FavoritesTableScreen_Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = FavoritesTableScreen_Gif.gif; sourceTree = "<group>"; };
+		8161C86C296C934900C3BAEC /* Views_Screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Views_Screenshots.png; sourceTree = "<group>"; };
+		8161C86E296C934900C3BAEC /* FavoriteQuoteScreen_Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = FavoriteQuoteScreen_Gif.gif; sourceTree = "<group>"; };
+		8161C870296C934900C3BAEC /* RandomQuoteScreen_Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RandomQuoteScreen_Gif.gif; sourceTree = "<group>"; };
 		81A7A46B295A63C7007662CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		81CC2761295A12A1000D9DEB /* RandomQuoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomQuoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CC2764295A12A1000D9DEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +81,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		8161C869296C932300C3BAEC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8161C86E296C934900C3BAEC /* FavoriteQuoteScreen_Gif.gif */,
+				8161C86A296C934800C3BAEC /* FavoritesTableScreen_Gif.gif */,
+				8161C870296C934900C3BAEC /* RandomQuoteScreen_Gif.gif */,
+				8161C86C296C934900C3BAEC /* Views_Screenshots.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		81A7A46A295A63AE007662CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +104,8 @@
 		81CC2758295A12A1000D9DEB = {
 			isa = PBXGroup;
 			children = (
+				8161C869296C932300C3BAEC /* Images */,
+				8161C868296C930A00C3BAEC /* README.md */,
 				81CC2763295A12A1000D9DEB /* RandomQuoteApp */,
 				81CC2762295A12A1000D9DEB /* Products */,
 			);
@@ -170,6 +192,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8161C875296C934900C3BAEC /* FavoriteQuoteScreen_Gif.gif in Resources */,
+				8161C871296C934900C3BAEC /* FavoritesTableScreen_Gif.gif in Resources */,
+				8161C877296C934900C3BAEC /* RandomQuoteScreen_Gif.gif in Resources */,
+				8161C873296C934900C3BAEC /* Views_Screenshots.png in Resources */,
 				81CC2771295A12A2000D9DEB /* LaunchScreen.storyboard in Resources */,
 				81CC276E295A12A2000D9DEB /* Assets.xcassets in Resources */,
 			);
@@ -336,8 +362,7 @@
 				INFOPLIST_FILE = RandomQuoteApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,8 +391,7 @@
 				INFOPLIST_FILE = RandomQuoteApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

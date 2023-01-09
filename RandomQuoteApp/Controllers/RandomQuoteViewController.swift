@@ -16,6 +16,7 @@ class RandomQuoteViewController: UIViewController{
     
     override func loadView() {
         self.view = randomView
+        self.navigationItem.title = "Random Quotes"
         fetchQuote()
     }
     

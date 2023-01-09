@@ -25,6 +25,7 @@ class FavoriteQuoteViewController: UIViewController {
         let delete = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(deleteButton(_:)))
         let share = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up.fill"), style: .plain, target: self, action: #selector(shareButton(_:)))
         self.navigationItem.rightBarButtonItems = [delete, share]
+        self.navigationItem.title = "Favorite Quote"
         
         if let favorite = favorite {
             self.contentView.quoteLabel.text = favorite.quote
