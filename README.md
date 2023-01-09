@@ -49,7 +49,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 
 - Quote.swift
 
-  A struct that represents a quote from the API. It has the following properties:
+  A struct that represents a quote from the API. It has the following:
     - `id`: An integer representing the unique ID of the quote.
     - `quote`: A string containing the text of the quote.
     - `author`: A string containing the name of the author of the quote.
@@ -58,7 +58,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 
 - Favorite.swift
 
-  A struct that represents a favorite quote that a user has saved. It has the following properties:
+  A struct that represents a favorite quote that a user has saved. It has the following:
     - `quote`: A string containing the text of the quote.
     - `author`: A string containing the name of the author of the quote.
 
@@ -66,6 +66,12 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 
   The `Equatable` extension for `Favorite` provides a way to compare two `Favorite` objects for equality. 
   
+- QuoteFetcher.swift
+
+  A struct that is used to fetch quotes from a remote API. It has the following:
+    - `apiURL`: A string which specifies the URL of the API.
+    - `fetchQuote`: A method makes an HTTP request to the API using the `URLSession` class, and passes the resulting data to the completion closure as an argument.
+
 
 ### Views
 
@@ -86,7 +92,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 
 - RandomQuoteViewController.swift
 
-  This view controller displays a random quote from the API. Also allow the user to replace the current displayed quote with another one and allow the user to save a quote as a favorite. It depends on the `Favorite` & `Quote` models, along with the `RandomQuoteView` class.
+  This view controller displays a random quote from the API. Also allow the user to replace the current displayed quote with another one and allow the user to save a quote as a favorite. It depends on the `Favorite`,`Quote` and `QuoteFetcher` models, along with the `RandomQuoteView` class.
 
   The view controller has the following:
     - `randomButtonPressed` function that fetches a new quote from the API.
