@@ -20,7 +20,7 @@
 
 ### Description
 
-Power Quotes iOS application displays quotes from influential people provided by [Dummy JSON](https://dummyjson.com/) quote API.   
+Power Quotes iOS application displays quotes from influential people provided by [Dummy JSON](https://dummyjson.com/) quote API. Power Quote's purpose is to provide a burst of wisdom to get you back focused.  
 
 ### Features
 
@@ -38,11 +38,12 @@ Power Quotes iOS application displays quotes from influential people provided by
 ## Architecture Pattern
 
 Power Quotes application leverages the MVC architectural pattern. I chose MVC because of the simplicity of the app, it has a small number of models and views, and there is no complex functionality. Because of those facts, the app benefited the most from using MVC over MVVM, which would have added unnecessary complexity. Some of the benefits of the approach are: 
-  - I make updates to view designs without affecting models or logic.
+  - I can make updates to view designs without affecting models or logic.
   - Components can be easily tested.
   - I can reuse my models or views in other parts of the app.
   - I can add new features or screens to the app since each component can be developed and tested independently.
   - My code codebase is easy to understand.
+  
 
 ### Models
 
@@ -64,6 +65,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
   The `Favorite` struct conforms to the `Codable` protocol, which means it can be encoded and decoded from a data object (such as JSON). 
 
   The `Equatable` extension for `Favorite` provides a way to compare two `Favorite` objects for equality. 
+  
 
 ### Views
 
@@ -78,6 +80,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 - FavoriteCell.swift
 
   A custom UITableViewCell that defines the UI components and layout for a cell in the Favorites table.
+  
 
 ### Controllers
 
@@ -121,6 +124,16 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 
 ## UI Design
 
+
+### Design Overview
+- The goal of Power Quotes is to inspire the user. The use of different shades of blue is to project a feeling of calm and wisdom.
+- The choice of using `UILabel` for quotes instead of `UITextView` is that the text doesn't require any editing, scrolling, or selection. The quotes are read-only.
+- The inclusion of the "Dear Self, " heading is to have the feel of reading a note or letter to yourself. 
+- Accessibility is important when I design my apps. This is why I chose to use Dynamic Type fonts for my text instead of custom fonts. 
+- A simple approach to design was done to keep the focus on the main value of the app which is the quotes.
+
+
+### Navigation 
 Navigation throughout the app utilizes a combination of a `UITabBar` and `UINavigationBar`. 
 The Random Quote Screen and Favorites Table are accessible by corresponding tabs in the `UITabBar`.
 The Favorite Quote Screen is accessible when a user selects a cell.
@@ -141,7 +154,7 @@ The `UINavigationBar` provides a back button to the Favorite Quote screen, allow
 UI components used are:
 
 - `UILabel`: A label that displays the heading "Dear Self, "
-- `UIView`: A view that contains the `quoteLabel` and `authorLabel` and serves as a container for the quote.   
+- `UIView`: A view that contains the `quoteLabel` and `authorLabel` and serves as a container.   
   - `UILabel`: A label that displays the text of the quote.
   - `UILabel`: A label that displays the name of the author of the quote.
 - UIStackView: A stack view that arranges the `quoteButton` and `saveButton` horizontally.
