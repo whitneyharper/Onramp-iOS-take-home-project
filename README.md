@@ -131,6 +131,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 - The inclusion of the "Dear Self, " heading is to have the feel of reading a note or letter to yourself. 
 - Accessibility is important when I design my apps. This is why I chose to use Dynamic Type fonts for my text instead of custom fonts. 
 - A simple approach to design was done to keep the focus on the main value of the app which is the quotes.
+- Landscape mode is not supported. This choice was based on if it was needed for the user experience. Landscape mode would cause content to stretch and a scroll would be needed. Which didn't add any value to the user experience. 
 
 
 ### Navigation 
