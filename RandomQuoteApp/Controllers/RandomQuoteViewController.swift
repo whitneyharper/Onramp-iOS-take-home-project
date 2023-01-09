@@ -11,6 +11,7 @@ class RandomQuoteViewController: UIViewController{
   
     var favorites = [Favorite]()
     var favoritesTableViewController: FavoritesTableViewController?
+    var quoteFetcher = QuoteFetcher()
     
    var randomView = RandomQuoteView()
     
@@ -34,23 +35,20 @@ class RandomQuoteViewController: UIViewController{
         saveAsFavorite()
     }
     
-    let apiURL = "https://dummyjson.com/quotes/random"
     func fetchQuote() {
-        let url = URL(string: apiURL)!
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let self = self,
-                  let data = data,
-                  error == nil,
-                  let result = try? JSONDecoder().decode(Quote.self, from: data)
-            else { return }
-            
+        quoteFetcher.fetchQuote { [weak self] result in
+          guard let self = self else { return }
+          switch result {
+          case .success(let result):
             DispatchQueue.main.async {
                 self.randomView.quoteLabel.text = "\"\(result.quote)\""
                 self.randomView.authorLabel.text = "- \(result.author)"
             }
+          case .failure(let error):
+              print("Failed to fetch quote:", error)
+          }
         }
-        task.resume()
-    }
+      }
     
     func saveAsFavorite(){
         let quote = self.randomView.quoteLabel.text
