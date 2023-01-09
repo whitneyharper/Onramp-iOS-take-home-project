@@ -49,7 +49,6 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 - Quote.swift
 
   A struct that represents a quote from the API. It has the following properties:
-
     - `id`: An integer representing the unique ID of the quote.
     - `quote`: A string containing the text of the quote.
     - `author`: A string containing the name of the author of the quote.
@@ -59,7 +58,6 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
 - Favorite.swift
 
   A struct that represents a favorite quote that a user has saved. It has the following properties:
-
     - `quote`: A string containing the text of the quote.
     - `author`: A string containing the name of the author of the quote.
 
@@ -119,6 +117,7 @@ Power Quotes application leverages the MVC architectural pattern. I chose MVC be
   The tab bar controller has the following:
     - Two navigation controllers for the "Random Quotes" and "Favorites" tabs, which contain `RandomQuoteViewController` and `FavoritesTableViewController`.
     - Customized tab bar appearance, including the background color and tab icons.
+    
 
 ## UI Design
 
@@ -152,7 +151,7 @@ UI components used are:
 
 ### Favorites Table Screen
 
-![](./Images/FavoriteTableScreen_Gif.gif)
+![](./Images/FavoritesTableScreen_Gif.gif)
 
 - Favorites table displays all a user's saved favorites.
 - Each cell has the quote's author's name and a right chevron icon.
