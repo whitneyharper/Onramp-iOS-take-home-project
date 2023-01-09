@@ -10,9 +10,9 @@
   - [Views](#views)
   - [Controllers](controllers)
 - [UI Design](#ui-design)
-  - [Models](#models)
-  - [Views](#views)
-  - [Controllers](controllers)
+  - [Random Quote Screen](#random-quote-screen)
+  - [Favorites Table Screen](#favorites-table-screen)
+  - [Favorite Quote Screen](#favorite-quote-screen)
 - [Author](#author)
 
 
