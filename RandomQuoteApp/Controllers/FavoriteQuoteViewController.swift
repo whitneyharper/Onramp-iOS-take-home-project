@@ -11,7 +11,6 @@ class FavoriteQuoteViewController: UIViewController {
     
     var favorite: Favorite?
     var favoritesTableViewController: FavoritesTableViewController?
-
     var contentView = FavoriteQuoteView()
     
     override func loadView() {
@@ -22,9 +21,12 @@ class FavoriteQuoteViewController: UIViewController {
         super.viewDidLoad()
         print(contentView == self.view)
         
-        let delete = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(deleteButton(_:)))
-        let share = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up.fill"), style: .plain, target: self, action: #selector(shareButton(_:)))
-        self.navigationItem.rightBarButtonItems = [delete, share]
+        contentView.delete.target = self
+        contentView.delete.action = #selector(deleteButton(_:))
+        contentView.share.target = self
+        contentView.share.action = #selector(shareButton(_:))
+       
+        self.navigationItem.rightBarButtonItems = [contentView.delete, contentView.share]
         self.navigationItem.title = "Favorite Quote"
         
         if let favorite = favorite {

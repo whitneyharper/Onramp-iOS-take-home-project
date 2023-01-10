@@ -11,7 +11,9 @@ class FavoriteQuoteView: UIView {
     
     var quoteLabel = UILabel()
     var authorLabel = UILabel()
-   
+    var delete = UIBarButtonItem()
+    var share = UIBarButtonItem()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -57,6 +59,16 @@ class FavoriteQuoteView: UIView {
        authorLabel.textAlignment = .center
        authorLabel.textColor = UIColor(red: 0.28627450980392155, green: 0.32941176470588235, blue: 0.45098039215686275, alpha: 1)
        authorLabel.translatesAutoresizingMaskIntoConstraints = false
+       
+       delete.image = UIImage(systemName: "trash.fill")
+       delete.style = .plain
+       delete.target = nil
+       delete.action = nil
+       
+       share.image = UIImage(systemName: "square.and.arrow.up.fill")
+       share.style = .plain
+       share.target = nil
+       share.action = nil
        
        addSubview(quoteLabel)
        addSubview(authorLabel)
